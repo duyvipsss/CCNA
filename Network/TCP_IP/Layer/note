@@ -1,0 +1,6 @@
+*Layer
+- Physical focuses on how to transmit bits over each individual link
+- Data-link focuses on sending data over one type of physical link
+- Network focuses on delivering data over the entire path from the original sending computer to the final destination computer
+- Tranport
+- Application

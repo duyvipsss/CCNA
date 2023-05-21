@@ -1,0 +1,46 @@
+* LANs
+- The connect nearby devices
+* WANs
+- The connect devices that are typycally relative far apart
+
+* Ethernet LANs
+- Ethernet switch: proving many physical porits into which cables can be connected
+- Erthenet cables: using for connect different Ethernet devices
+
+* Wireless LANs
+- AP: using radio wares to send the bits from one node to the next. 
+
+* Ethernet Type (by IEEE)
+- Table 2-2
+
+* UTP cables
+- Define: The cables use electrical signal to tranmis data
+- Structure: the wires will be twisted together
++ Electric circuit: use two wires to create a loop, allowing electricity to flow
++ Encoding scheme signal: change the electrical signal over time, follow the rules to communicate 1s and 0s
++ Twisted: helping cancel out most of the EMI (The EMI is electromagnetic interference that interferes with the electrical signals in nearby wires)
+- 10BASW-T and 100BASE-T require two pairs of wires while the 1000BASE-T requires four pairs. Each wire has a color-coded platic coating, with the wires in a pair having color scheme
+- RJ-45 connector: having eight physical locations into which the eight wires in the cable can be inserted, called pin positions, or simply pins. These pins create a place where the ends of the copper wires can touch the electronics inside the nodes at the end of the physical link so that electricity can flow.
+
+* 100BASE-T rules
+Ethernet NIC, Router, Wireless tranmitters use the pair connected to pins 1 and 2; The NIC receivers use a pair of wires at pin 3 and 6.
+Hubs, Switches tranmis on pins 3,6
+
+* 1000BASE-T rules
+- Similar 100BASE-T rules but adds a pair pins 4 and 5 and 7 and 8, using more advanced electronics that allow both ands to transmit and receive simultaneously on each wire pair.
+* Fiber Cabling
+- Cladding and core work together to create the environment to allow tranmission of light over the cable.
+* Sending ethernet with switchs and Hubs
+- Half-duplex: the devices must wait to send if it currently receiving a freame; in other words, it cannot send and receive at the same time.
+- Full-duplex: the device does not have to wait before sending; it can send and receive at the same time
+* Lan Hubs
+- Like switch, but hubs use different rules for forwarding data, hubs forward data using physical layer standard rather data-link standard -> layer 1 devices. 
+- Mechanism: When an electrical signal comes in one hub port, the hub repeats that signal out all orther ports. 
+- Downside: When two or more tranmitted a signal at the same time instant, it occurs collision. It can garbled the data. Use half-duplex and CSMA/CD to prevent the collison in Hubs. 
+
+* WAN
+WAN: have two technologies
+* Leased-line WAN
+- HDLC (High-level Data Link Control): 
+
+*
