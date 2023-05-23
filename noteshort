@@ -1,0 +1,115 @@
+Part I: Introduce to Networking
+Chapter1: Introduction to TCP/IP Networking
+
+# Perspectives on Networking
+- Networking is simply this: moving data from one device to another
+
+# TCP/IP networking model
+- Networking model: the architectual blueprint for building a network, that the networkng has the right foundation and structure so that it will not fall down.
+
+* History leading to TCP/IP
+- Before TCP/IP was create each vendors created the networking protocols supported only that vendors computers, making the combined networks much more complex.
+- In the late 1970s, the Internationals Organization for Standardization (ISO), beginning work on what would become known as the Open System Interconnection (OSI) networking model.
+- A second, less-formal effort to create an open public networking model sprouted forth from U.S Department of Defense (DoD) contract. Reseachers at various universities volunteered, these effort resuilted in a competing open networking model called TCP/IP.
+- Here in the twenty-first century, TCP/IP dominates, the OSI never succeeded in the marketplace.
+
+*Overview of the TCP/IP networking model
+- TCP/IP model both defines and references a large collection of protocols that allow computers to communicate. 
+- The vendors that created the harhware and software implemented TCP/IP.
+- TCP/IP breaks the functions into a small number of categories called layers include:
++ Application layer provide 
++ Tranport
++ Networking layer focuses on delivering data over the entire path from the original sending computers to the final destination computer
++ Data Link layer focuses on sending data over ont type of physical link
++ Physical layer focuses on how to tranmit bits over each individual links 
+- Each layer provides a service to the layer above it
+- Same-layer interaction: when a particular on one computer wants to communicate with the same layer on another computer, the two computers use header to hold the information that they want to communicate.
+- Adjacent-Layer interaction: which refers to the concepts of how adjacent layers in a networking model, on the same computer, work together.
+
+# Data encapsulation terminology
+- The term encapsulation refers to the process of puttiong headers (and some time trailers) around some data.
+- In fact, if you use the five layer TCP/IP model, one step corresponds to the role of each layer. The step are summarized in the following list:
++ Create and encapsulate the application data with any required application layer headers
++ Encapsulate a tranport layer header
++ Encapsulate a network layer header
++ Encapsulate layer header and trailer
++ Transmit the bit
+* Names of TCP/IP messages
+- TCP: segment
+- IP: Packet
+- Datalink: Frame
+- Each term has a specific meaning, referring following that headers defines by a particular layer.
+
+* OSI networking model and terminology
+- OSI has seven layer
+- The aplication layer breaks to three layer Application, Presentation, Session
+- OSI use the term protocol data unit (PDU) to refers the messages for the encapsulation
+- The OSI can be used as a standard of comparison to other networking models
+
+Chapter 2: Fundamentals of ethernet LANs
+- Most enterprise computer networks can be separated into two types of technology: local-area networks (LANS) and wide-area networks (WANs).
+# An overview of LANs
+*Typical SOHO LANS
+- One routers or wireless router, one switch, connect to other node device
+*Typical Enterprise LANs
+- One routers, many switch and many wireless router, connect to other node in many room
+* The variety of ethernet physical layer standards
+- The IEEE defines Ethernet physical layer standards, the formal name begins with 802.3 followed by some suffix letters.
+- The IEEE also uses more meaningful shortcut names that identify the speed, as well as a clue about whether the cabling is UTP (with a suffix that includes T) of fiber (with a suffix that includes X)
+
+* Consistent behavior over all links using the ethernet data-link layer
+- No matter whether tha data flows over a UTP cable or any kind of fiber cable, and no matter the speed, the data-link header and trailer use the same format. Data-link focus on sending an Ethernet freame form source to destination Erthernet node and physical layer focus on sending bits over a cable.
+- Together, they deliver Ethernet frames from the one device on the LAN to some other device.
+
+# Building physical ethernet LANs with UTP (Unshielded Twisted Pair)
+* Transmitting data using twisted pairs
+- Electrical circuit: use two wires inside a single twisted pair of wires, create a complete loop, allowing electricity to flow.
+- Send data: the rules called an encoding scheme like when two people talk using the same language. Thr transmitting node changes the electrical signal over time, the receiver, using the same rules, interprets those changes as either 0s of 1s.
+- The twisting helps solve EMI that interferes with the electrical signals in nearby wires.
+
+* Breaking Down a UTP ethernet link
+- The 10Base-T and 100Base-T standards require two pair of wires, while 1000Base-T standard require four pair of wires.
+- Each wire has a color-coded plastic coating, with the wires in a pair having color scheme.
+- Erthernet UTP cables use an RJ-45 connector on both ends. The RJ-45 connector has eight physical location into which the eight wires in the cable can be inserted, called pin positions, or simply pins.
+- These pins creates a place where the ends of the copper wires can touch the electronics inside the nodes at the end of the physical link so that electricity can flow.
+- PCs often include this RJ-45 Ethernet port of a network interface card (NIC)
+
+*UTP cabling pinouts for 10Base-T and 100Base-The
+- For correct transmission over the link, the wires in the UTP cable must be connected to the correct pin positions in the RJ-45 connectors.
+- Crossover cable: Ih the endpoints tranmits on the same pin pair
+- Straight-thought cable: If the endpoints tranmit on different pin pairs
+10base-t and 100base-t pin pair used
+- Tranmits on Pin 1,2
++ PC NICs
++ Routers
++ Wireless access point 
+- Transmits on pin 3,6
++ Hubs
++ Switches
+- Auto-mdix: when the wrong cable is used and automatically changes its logic to make the link work.
+
+* UTP cabling pinouts for 1000Base-t
+- Requires four wire pairs
+- Use more advanced electronics that allow both ends to tranmit and receive semultaneously on each wire pair.
+
+#Building physical ethernet LANs with fiber 
+*Fiber cabling tranmission concepts
+- Using glass as the medium through which light passes, varying that light over time to encode 0s and 1s. The glass could break, so glass fiber needs some protection and strengthening.
+- The tranmitsion in fiber cable has two mode are multimode and singlemode
++ Multimode: allowing for multiple angles of light waves entering the core
++ Singlemode: using a smaller-diameter core, around one-filth the diameter of common multimode cables. Transmitter sends light at a single angle
+- Multimode improves the maximum distances over UTP, and less expensive transmitters as compared with single-mode
+- Tranmits with fiber cable need two cable, one for each direction.
+*Using fiber with ethernet
+- The distance is the fist criterion
+- The cost is the second criterion
+- The enviroment is the third criterion
+
+# Sending data in ethernet networks
+* Ethernet data-link protocols
+- Ethernet data-link defines the Ethernet frame
+- Header attribute: Preamble, SFD, Destination, Source, Type
+- Trailer attribute: FCS
+*Ethernet addressing
+- Media access control (MAC)
++ Having 6 bytes 
